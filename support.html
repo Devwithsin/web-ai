@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support – AI Auction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">AI Auction</div>
+  <ul class="nav-links">
+    <li><a href="index.html">User</a></li>
+    <li><a href="album.html">Album</a></li>
+    <li><a href="support.html" class="active">Support</a></li>
+  </ul>
+</nav>
+
+<section class="auction-section">
+  <div class="auction-container" style="flex-direction:column;">
+    <h1>🛠 ศูนย์ช่วยเหลือ</h1>
+    <form class="support-form" id="supportForm">
+      <input type="text" placeholder="ชื่อของคุณ" required>
+      <input type="email" placeholder="อีเมลติดต่อกลับ" required>
+      <textarea placeholder="รายละเอียดปัญหา" rows="5" required></textarea>
+      <button type="submit">ส่งข้อความ</button>
+    </form>
+    <p id="supportMsg"></p>
+  </div>
+</section>
+
+<script>
+  document.getElementById("supportForm").addEventListener("submit",e=>{
+    e.preventDefault();
+    document.getElementById("supportMsg").textContent="✅ ข้อความถูกส่งเรียบร้อยแล้ว ขอบคุณ!";
+    e.target.reset();
+  });
+</script>
+</body>
+</html>

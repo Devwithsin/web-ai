@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>อัลบั้มภาพ AI Auction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">AI Auction</div>
+    <ul class="nav-links">
+      <li><a href="index.html">User</a></li>
+      <li><a href="album.html" class="active">Album</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+  </nav>
+
+  <section class="auction-section" style="flex-direction: column; align-items: center; margin-top: 120px;">
+    <h1>📸 อัลบั้มภาพที่คุณชนะการประมูล</h1>
+    <div class="album-grid" id="albumGrid"></div>
+  </section>
+
+  <script>
+    const albumData = JSON.parse(localStorage.getItem("auctionAlbum")) || [];
+    const albumGrid = document.getElementById("albumGrid");
+
+    if (albumData.length === 0) {
+      albumGrid.innerHTML = `
+        <div class="empty-message">
+          <p>😅 คุณยังไม่ได้ประมูลหรือยังไม่ชนะการประมูลภาพใด ๆ</p>
+          <a href="index.html" class="back-btn">กลับไปยังหน้าประมูล</a>
+        </div>
+      `;
+    } else {
+      albumData.forEach(item => {
+        const div = document.createElement("div");
+        div.classList.add("album-item");
+        div.innerHTML = `
+          <img src="${item.image}" alt="art">
+          <p>ราคา ${item.price} บาท</p>
+          <p>ผู้ชนะ: ${item.winner}</p>
+        `;
+        albumGrid.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>

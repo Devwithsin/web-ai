@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Auction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">AI Auction</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">User</a></li>
+      <li><a href="album.html">Album</a></li>
+      <li><a href="support.html">Support</a></li>
+      <p>💎 เครดิตของคุณ: <span id="credit">3000</span> บาท</p>
+    </ul>
+  </nav>
+
+  
+  <section class="auction-section">
+    <div class="auction-container">
+      <div class="image-box">
+        <!-- ✅ แค่รูปเดียว -->
+        <img id="artImg" src="img/bird-9811729_1280.jpg" alt="ภาพประมูล" />
+      </div>
+
+      <div class="info-box">
+        <h1>🎨 ประมูลภาพ AI</h1>
+        <p>💰 ราคาปัจจุบัน: <span id="price">100</span> บาท</p>
+        <p>🏆 ผู้เสนอสูงสุด: <span id="leader">ไม่มีใคร</span></p>
+        <p>⏱️ เวลาเหลือ: <span id="timer">10</span> วิ</p>
+        <p>💎 เครดิตของคุณ: <span id="credit">100</span></p>
+
+        <input type="text" id="nameInput" placeholder="ชื่อของคุณ" />
+        <button id="bidBtn">เสนอราคา +10</button>
+        <p id="winner" class="result"></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
