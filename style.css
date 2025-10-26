@@ -312,3 +312,24 @@ html, body {
     width: 90%;
   }
 }
+.page-credit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  color: #ffcc99;
+  padding: 10px 0;
+  font-size: 0.95em;
+  font-weight: 400;
+  border-top: 1px solid rgba(255, 100, 0, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.page-credit span {
+  color: #ffa64d;
+  font-weight: 500;
+}
+
